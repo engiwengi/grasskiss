@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "grass_kissing",
+  "id": "grass_kiss",
   "version": "${version}",
-  "name": "Grass Kissing",
+  "name": "Grass Kiss",
   "description": "Kiss grass while you're holding a sword",
   "authors": [
     "engiwengi"
   ],
   "contact": {
-    "sources": "https://github.com/engiwengi/grasskissing"
+    "sources": "https://github.com/engiwengi/grasskiss"
   },
   "license": "Apache-2.0",
-  "icon": "assets/grasskissing/icon.png",
+  "icon": "assets/grasskiss/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["net.grass.kissing.GrassKissing"]
+    "client": ["net.grass.kissing.GrassKiss"]
   },
   "mixins": [
-    "grass.kissing.mixins.json"
+    "grass.kiss.mixins.json"
   ],
   "custom": {
     "modmenu:clientsideOnly": true

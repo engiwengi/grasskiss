@@ -1,4 +1,4 @@
-package net.grass.kissing.mixin;
+package net.grass.kiss.mixin;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

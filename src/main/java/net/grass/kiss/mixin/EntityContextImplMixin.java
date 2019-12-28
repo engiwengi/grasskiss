@@ -1,6 +1,6 @@
-package net.grass.kissing.mixin;
+package net.grass.kiss.mixin;
 
-import net.grass.kissing.util.EntityContextDuck;
+import net.grass.kiss.util.EntityContextDuck;
 import net.minecraft.entity.EntityContextImpl;
 import net.minecraft.item.Item;
 import org.spongepowered.asm.mixin.Final;

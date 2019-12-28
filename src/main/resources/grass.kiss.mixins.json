@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.grass.kissing.mixin",
+  "package": "net.grass.kiss.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
     "PlantBlockMixin",

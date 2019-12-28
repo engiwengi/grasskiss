@@ -1,4 +1,4 @@
-package net.grass.kissing.util;
+package net.grass.kiss.util;
 
 import net.minecraft.item.Item;
 
