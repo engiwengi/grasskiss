@@ -17,9 +17,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(PlantBlock.class)
 public abstract class PlantBlockMixin extends BlockMixin {
     @Environment(EnvType.CLIENT)
-    void grasskissng$onGetOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ePos, CallbackInfoReturnable<VoxelShape> cir) {
+    void grasskiss$onGetOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ePos, CallbackInfoReturnable<VoxelShape> cir) {
         if (ePos instanceof EntityContextDuck) {
-            if (((EntityContextDuck) ePos).grasskissing$getItem() instanceof SwordItem) {
+            if (((EntityContextDuck) ePos).grasskiss$getItem() instanceof SwordItem) {
                 cir.setReturnValue(VoxelShapes.empty());
             }
         }

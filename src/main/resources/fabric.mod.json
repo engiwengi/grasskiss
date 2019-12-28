@@ -14,7 +14,7 @@
   "icon": "assets/grasskiss/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["net.grass.kissing.GrassKiss"]
+    "client": ["net.grass.kiss.GrassKiss"]
   },
   "mixins": [
     "grass.kiss.mixins.json"

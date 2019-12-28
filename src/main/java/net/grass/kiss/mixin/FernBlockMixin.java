@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class FernBlockMixin extends PlantBlockMixin {
     @Environment(EnvType.CLIENT)
     @Inject(method = "getOutlineShape", at = @At("RETURN"), cancellable = true)
-    void grasskissng$onGetOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ePos, CallbackInfoReturnable<VoxelShape> cir) {
-        super.grasskissng$onGetOutlineShape(state, view, pos, ePos, cir);
+    void grasskiss$onGetOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ePos, CallbackInfoReturnable<VoxelShape> cir) {
+        super.grasskiss$onGetOutlineShape(state, view, pos, ePos, cir);
     }
 }

@@ -15,7 +15,7 @@ public class EntityContextImplMixin implements EntityContextDuck {
     private Item heldItem;
 
     @Unique
-    public Item grasskissing$getItem() {
+    public Item grasskiss$getItem() {
         return this.heldItem;
     }
 
