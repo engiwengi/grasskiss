@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.grass.kissing.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": [
+    "PlantBlockMixin",
+    "FernBlockMixin",
+    "BlockMixin",
+    "EntityContextImplMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
