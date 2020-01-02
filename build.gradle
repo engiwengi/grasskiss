@@ -13,11 +13,18 @@ group = project.maven_group
 minecraft {
 }
 
+repositories {
+    jcenter()
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    
+
+//  Cloth Config
+    modImplementation "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+    include "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
 }
 
 processResources {
