@@ -51,7 +51,7 @@ public class GrassKissConfig {
     /**
      * Rules to be checked
      */
-    private SortedSet<Rule> rules = new TreeSet<>(Comparator.comparingInt(Rule::getPriority));
+    private SortedSet<Rule> rules = new TreeSet<>(Comparator.comparingInt(Rule::getPriority).thenComparing(Rule::hashCode));
 
     static Screen createConfigScreen(Screen parent) {
         ConfigBuilder builder = ConfigBuilder.create().setParentScreen(parent).setTitle(String.format("config.%s.title", GrassKiss.MOD_ID));
