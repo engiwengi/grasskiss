@@ -3,7 +3,7 @@
   "id": "grass_kiss",
   "version": "${version}",
   "name": "Grass Kiss",
-  "description": "Kiss grass while you're holding a sword",
+  "description": "Ignore grass when you want to",
   "authors": [
     "engiwengi"
   ],
@@ -14,7 +14,8 @@
   "icon": "assets/grasskiss/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["net.grass.kiss.GrassKiss"]
+    "client": ["net.grass.kiss.GrassKiss"],
+    "modmenu": ["net.grass.kiss.config.GrassKissModMenuCompat"]
   },
   "mixins": [
     "grass.kiss.mixins.json"
