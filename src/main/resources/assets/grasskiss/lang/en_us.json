@@ -1,3 +1,11 @@
 {
-  "config.grass_kiss.title": "Grass Kiss Config"
+  "config.grass_kiss.title": "Grass Kiss Config",
+  "config.grass_kiss.apply_items.tooltip": "If not in use, keep empty for performance",
+  "config.grass_kiss.apply_swords": "Apply to swords",
+  "config.grass_kiss.apply_hoes": "Apply to hoes",
+  "config.grass_kiss.apply_shovels": "Apply to shovels",
+  "config.grass_kiss.apply_pickaxes": "Apply to pickaxes",
+  "config.grass_kiss.apply_tridents": "Apply to tridents",
+  "config.grass_kiss.apply_items": "Apply to items",
+  "config.grass_kiss.apply_axes": "Apply to axes"
 }

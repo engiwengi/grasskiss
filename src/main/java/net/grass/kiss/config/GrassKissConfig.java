@@ -9,6 +9,7 @@ import net.grass.kiss.config.rule.Rule;
 import net.grass.kiss.config.rule.Rules;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.Item;
+import net.minecraft.text.TranslatableText;
 
 import java.util.*;
 
@@ -57,13 +58,13 @@ public class GrassKissConfig {
         ConfigBuilder builder = ConfigBuilder.create().setParentScreen(parent).setTitle(String.format("config.%s.title", GrassKiss.MOD_ID));
         GrassKissConfig config = GrassKissConfigManager.getConfig();
         builder.getOrCreateCategory("general")
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Swords", config.applySwords).setDefaultValue(true).setSaveConsumer(b -> config.applySwords = b).build())
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Axes", config.applyAxes).setDefaultValue(true).setSaveConsumer(b -> config.applyAxes = b).build())
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Pickaxes", config.applyPickaxes).setDefaultValue(false).setSaveConsumer(b -> config.applyPickaxes = b).build())
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Hoes", config.applyHoes).setDefaultValue(false).setSaveConsumer(b -> config.applyHoes = b).build())
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Shovels", config.applyShovels).setDefaultValue(false).setSaveConsumer(b -> config.applyShovels = b).build())
-                .addEntry(ConfigEntryBuilder.create().startBooleanToggle("Apply to Tridents", config.applyTridents).setDefaultValue(true).setSaveConsumer(b -> config.applyTridents = b).build())
-                .addEntry(ConfigEntryBuilder.create().startStrList("Apply to individual items", config.getApplyItems()).setTooltip("If not in use, keep empty for performance").setCreateNewInstance(baseListEntry -> new StringListListEntry.StringListCell("minecraft:stone", (StringListListEntry) baseListEntry)).setDefaultValue(new ArrayList<>()).setSaveConsumer(items -> config.applyItems = items).build());
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_SWORDS.asString(), config.applySwords).setDefaultValue(true).setSaveConsumer(b -> config.applySwords = b).build())
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_AXES.asString(), config.applyAxes).setDefaultValue(true).setSaveConsumer(b -> config.applyAxes = b).build())
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_PICKAXES.asString(), config.applyPickaxes).setDefaultValue(false).setSaveConsumer(b -> config.applyPickaxes = b).build())
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_HOES.asString(), config.applyHoes).setDefaultValue(false).setSaveConsumer(b -> config.applyHoes = b).build())
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_SHOVELS.asString(), config.applyShovels).setDefaultValue(false).setSaveConsumer(b -> config.applyShovels = b).build())
+                .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_TRIDENTS.asString(), config.applyTridents).setDefaultValue(true).setSaveConsumer(b -> config.applyTridents = b).build())
+                .addEntry(ConfigEntryBuilder.create().startStrList(ConfigTexts.APPLY_ITEMS.asString(), config.getApplyItems()).setTooltip(ConfigTexts.APPLY_ITEMS_TOOLTIP.asString()).setCreateNewInstance(baseListEntry -> new StringListListEntry.StringListCell("minecraft:stone", (StringListListEntry) baseListEntry)).setDefaultValue(new ArrayList<>()).setSaveConsumer(items -> config.applyItems = items).build());
         builder.setSavingRunnable(GrassKissConfigManager::save);
         return builder.build();
     }
@@ -97,6 +98,17 @@ public class GrassKissConfig {
             }
         }
         return false;
+    }
+
+    static private class ConfigTexts {
+        static final TranslatableText APPLY_ITEMS_TOOLTIP = new TranslatableText(String.format("config.%s.apply_items.tooltip", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_SWORDS = new TranslatableText(String.format("config.%s.apply_swords", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_AXES = new TranslatableText(String.format("config.%s.apply_axes", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_PICKAXES = new TranslatableText(String.format("config.%s.apply_pickaxes", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_HOES = new TranslatableText(String.format("config.%s.apply_hoes", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_SHOVELS = new TranslatableText(String.format("config.%s.apply_shovels", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_TRIDENTS = new TranslatableText(String.format("config.%s.apply_tridents", GrassKiss.MOD_ID));
+        static final TranslatableText APPLY_ITEMS = new TranslatableText(String.format("config.%s.apply_items", GrassKiss.MOD_ID));
     }
 }
 
