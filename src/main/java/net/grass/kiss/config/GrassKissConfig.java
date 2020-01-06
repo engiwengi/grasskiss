@@ -64,7 +64,7 @@ public class GrassKissConfig {
                 .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_HOES.asString(), config.applyHoes).setDefaultValue(false).setSaveConsumer(b -> config.applyHoes = b).build())
                 .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_SHOVELS.asString(), config.applyShovels).setDefaultValue(false).setSaveConsumer(b -> config.applyShovels = b).build())
                 .addEntry(ConfigEntryBuilder.create().startBooleanToggle(ConfigTexts.APPLY_TRIDENTS.asString(), config.applyTridents).setDefaultValue(true).setSaveConsumer(b -> config.applyTridents = b).build())
-                .addEntry(ConfigEntryBuilder.create().startStrList(ConfigTexts.APPLY_ITEMS.asString(), config.getApplyItems()).setTooltip(ConfigTexts.APPLY_ITEMS_TOOLTIP.asString()).setCreateNewInstance(baseListEntry -> new StringListListEntry.StringListCell("minecraft:stone", (StringListListEntry) baseListEntry)).setDefaultValue(new ArrayList<>()).setSaveConsumer(items -> config.applyItems = items).build());
+                .addEntry(ConfigEntryBuilder.create().startStrList(ConfigTexts.APPLY_ITEMS.asString(), config.getApplyItems()).setExpended(true).setTooltip(ConfigTexts.APPLY_ITEMS_TOOLTIP.asString()).setCreateNewInstance(baseListEntry -> new StringListListEntry.StringListCell("minecraft:stone", (StringListListEntry) baseListEntry)).setDefaultValue(new ArrayList<>()).setSaveConsumer(items -> config.applyItems = items).build());
         builder.setSavingRunnable(GrassKissConfigManager::save);
         return builder.build();
     }
