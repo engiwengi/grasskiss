@@ -1,16 +1,16 @@
 package net.grass.kiss.mixin;
 
 import net.grass.kiss.util.EntityContextDuck;
-import net.minecraft.entity.EntityContextImpl;
+import net.minecraft.block.EntityShapeContext;
 import net.minecraft.item.Item;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 
-@Mixin(EntityContextImpl.class)
+@Mixin(EntityShapeContext.class)
 @SuppressWarnings("unused")
-public class EntityContextImplMixin implements EntityContextDuck {
+public class EntityShapeContextMixin implements EntityContextDuck {
     @Shadow
     @Final
     private Item heldItem;
