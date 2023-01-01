@@ -24,6 +24,6 @@
     "modmenu:clientsideOnly": true
   },
   "depends": {
-    "cloth-config2": ">=2.0.0"
+    "cloth-config2": ">=4.0.0"
   }
 }

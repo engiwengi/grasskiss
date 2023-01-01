@@ -5,8 +5,8 @@
   "client": [
     "PlantBlockMixin",
     "FernBlockMixin",
-    "BlockMixin",
-    "EntityContextImplMixin"
+    "AbstractBlockMixin",
+    "EntityShapeContextMixin"
   ],
   "injectors": {
     "defaultRequire": 1
